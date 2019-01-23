@@ -243,8 +243,8 @@ header {
 
 .presentation-second {
 	background: url(img/background-snow.png) 35px -80px / 35% no-repeat, url(img/background-snow.png) bottom -80px right 35px / 35% no-repeat;
-	margin-bottom: 100px;
-	margin-top: 120px;
+	padding-bottom: 100px;
+	padding-top: 120px;
 }
 
 .presentation-second__title {
@@ -401,8 +401,12 @@ header {
 	.header__button {
 		margin-top: 20px;
 	}
+	
+	.services {
+		margin-top: -190px;
+	}
 		
-	.presentation__wrapper, .presentation-second__wrapper, .presentation-second__wrapper:nth-child(2), .presentation__wrapper:nth-child(2) {
+	.quote, .presentation__wrapper, .presentation-second__wrapper, .presentation-second__wrapper:nth-child(2), .presentation__wrapper:nth-child(2) {
 		flex-direction: column;
 		text-align: center;
 	}
@@ -421,9 +425,14 @@ header {
 		float: none;
 	}
 	
-	.presentation-second__image-wrapper, .presentation-second__description-wrapper {
+	.presentation-second__image-wrapper, .presentation-second__description-wrapper, .quote__right-wrapper, .quote__left-wrapper  {
 		width: 100%;
 	}
+	
+	.quote__left-wrapper, .quote__signature {
+		margin-bottom: 60px;
+	}
+	
 	
 	.presentation__image-wrapper, .presentation__descriprion-wrapper {
 		width: 100%
