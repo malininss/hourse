@@ -1,489 +1,458 @@
-@font-face { 
-    font-family: 'OpenSans-Bold';
-    src: url(fonts/OpenSans-Bold.ttf) format("truetype"),
-         url(fonts/OpenSans-Bold.woff) format("woff"), 
-         url(fonts/OpenSans-Bold.woff2) format("woff2");
-}
-
-@font-face { 
-    font-family: 'OpenSans-Regular';
-    src: url(fonts/OpenSans-Regular.ttf) format("truetype"),
-         url(fonts/OpenSans-Regular.woff) format("woff"), 
-         url(fonts/OpenSans-Bold.woff2) format("woff2");
-}
-
-
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'arial', sans-serif;
 	box-sizing: border-box;
 }
 
-body {
-	font-family: 'OpenSans-Regular', sans-serif;
+header {
+	margin-bottom: 100px;
 }
 
-h2 {
-	font-family: 'OpenSans-Bold', sans-serif;
+.button {
+	height: 50px;
+	width: 230px;
+	text-align: center;
+  box-shadow: 0 9px 63px 6px #799bb124;
+	border-radius: 20px;
+	line-height: 50px;
+	vertical-align: middle;
 	text-transform: uppercase;
-	color: #e7e7e7;
-	font-size: 50px;
-	margin: 8px 0;
-	padding: 0 20px;
-}
-
-h3 {
-	font-family: 'OpenSans-Bold', sans-serif;
-	font-size: 23px;
-	text-transform: uppercase;	
-	color: #c1c1c1;
-	margin-bottom: 17px;
-	letter-spacing: 1.5px;
-}
-
-.number {
-	font-family: 'OpenSans-Bold', sans-serif;
-	color: #000;
+	font-weight: 600;
+	color: #43a9ff;
 	font-size: 14px;
-	float: left;
-	display: block;
-	margin-top: 2px;
-	margin-right: 8px;
-	/*border-bottom: 3px solid #5e42b0;*/
+	margin: auto;
+	margin-bottom: 90px;
+}
+
+.button:hover {
+  box-shadow: 0 9px 63px 6px #799bb142;
+	cursor: pointer;
+}
+
+.button:not(:hover) {
+	transition: 0.6s;	
+}
+
+.header {
+	max-width: 1500px;
+	padding: 0 15px;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	
+}
+
+.header__button {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+  box-shadow: 0 9px 63px 6px #799bb124;
+	margin-top: 57px;
+	flex-shrink: 0;
+}
+
+.header__burger-button {
+	background: black;
+	width: 18px;
+	height: 2px;
+	margin: 0 auto;
+  margin-top: calc(50% - 1px);
 	position: relative;
 }
 
-.number::after {
-	display: block;
+.header__burger-button:before {
 	content: "";
-	height: 4px;
-	background-color: #5e42b0;
-	width: 100%;
-	margin-top: 2px;	
-	border-radius: 2px;
-}
-
-.bold {
-	font-weight: bold;
-}
-
-.top {
-	width: 100%;
-  min-height: 100vh;
-	background: url("img/football_767.jpg") no-repeat;
-	background-size: cover;
-  background-position: center top;
-	border-bottom: 1px solid #1883d7;
-}
-
-.top__img {
-	max-height: 100vh;
 	display: block;
-}
-
-.top__img-wrapper {
-  height: 100vh;
-	background: url("img/football_767.jpg") no-repeat;
-	background-size: cover;
-  background-position: center top;
-}
-
-.top__content {
-	background-color: #000033d4;
-	min-height: 100vh;
-}
-
-.top__logo-wrapper {
-	text-align: center;
-	margin-bottom: 21.47vh;
-}
-
-.top__logo {
-	fill: #fff;
-	width: 133px;
-  margin-top: 33px;
-}
-
-.top__text-wrapper {
-	font-family: 'OpenSans-Bold';
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 8.75vw;
-  margin: 0 5.625%;
-	letter-spacing: 1.5px;
-  line-height: 133.14%;
-  /*white-space: nowrap;*/
-}
-
-.top__first-text {
-	margin-bottom: 4.06vw;
-}
-
-.top__second-text {
-	margin-left: 14.06vw;
-	margin-bottom: 14vh;
-}
-
-.top__store-wrapper {
-  font-family: 'OpenSans-Regular';
-	font-size: 8px;
-	color: #fff;
-	text-transform: uppercase;
-	line-height: 12px;
-	letter-spacing: 0;
-	padding-bottom: 84px;
-}
-
-.top__store {
-	height: 35px;
-	max-width: 280px;
-	margin:	0 auto;
-	background: #5e42b0;
-	border-radius: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.top__apple-store {
-	margin-bottom: 14px;
-}
-
-.top__logo-apple {
-	fill: white;
-	height: 24px;
-	margin-right: 8px;
-}
-
-.top__logo-google-play {
-	fill: white;
-	height: 24px;
-	margin-right: 8px;
-}
-
-.top__img-wrapper-cont {
-	
-}
-
-.top__store-container {
-	display: flex;
-	align-items: center;
-	min-width: 115px;
-}
-
-.list {
-	position: relative;
-}
-
-.list__step-wrapper {
-	margin-top: 228px;
-}
-
-.athlets-center-container {
-	max-width: 500px;
-	margin: 0 auto;	
-}
-
-.players-center-container {
-	max-width: 500px;
-	margin: 0 auto;	
-}
-
-.athlets__img-wrapper {
-	text-align: center;
+	background: black;
+	width: 18px;
+	height: 2px;
+  top: -5px;
 	position: absolute;
-	top: 71px;
-	left: calc(50% - 96px);
 }
 
-.players__img-wrapper {
-	text-align: center;
+.header__burger-button:after {
+	content: "";
+	display: block;
+	background: black;
+	width: 18px;
+	height: 2px;
+  top: 5px;
 	position: absolute;
-	top: 71px;
-	left: calc(50% - 151px);
 }
 
-.list__step {
-	padding: 50px 20px;
+.header__search-icon {
+  background: url(img/search.png) no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: 50%;
 }
 
-.list__step-description {
-	font-size: 15px;
-	letter-spacing: 1px;
-	line-height: 19px;
+.header__logo-container {
+	width: 416px;
+	height: 416px;
+	border-radius: 50%;
+  box-shadow: 0 9px 63px 6px #799bb124;
+	margin-top: -208px;
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	align-items: center;
+  font-weight: 600;
+	flex-shrink: 0;
 }
 
-.list__step:first-child {
-	background-color: #fafafa;
-	padding-top: 76px;
+.header__logo {
+	margin-top: 265px;
+	font-size: 45px;
+	color: #43a9ff;
 }
 
-.list__step:nth-child(2) {
-	background-color: #f5f4f9;
+.header__logo-description {
+	font-size: 16px;
+	color: #e4e6e8;
 }
 
-.athlets-last-step {
-	background-color: #5e42b0;
-	color: #fff;
+.first-text {
+	padding: 0 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-.athlets-last-step .number:after, .players-last-step .number:after {
-	background-color: #fff;
+.first-text__button {
+	margin-bottom: 0;
 }
 
-.players-last-step {
-	background-color: #090c35;
-	color: #fff;
+.title-text {
+	font-size: 3.12rem;
 }
 
-.players-last-step .number {
-	color: #8765dd;
+.standart-description {
+	font-size: 16px;
+	color: #bbc0c6;
+	line-height: 28px;
+}
+
+.subline-description {
+	font-size: 18px;
+	color: #d2d5d8;
+}
+
+.small-description {
+	font-size: 14px;
+	color: #b2b3b5;
+	line-height: 22px;
+}
+
+.first-text__headline {
+	margin-bottom: 10px;
+}
+
+.first-text__subline {
+	margin-bottom: 90px;
+}
+
+.horse-background {
+	background: url('img/background.jpg') no-repeat center;
+	min-width: 100%;
+	height: 1100px;
+  margin-top: -200px;
+}
+
+.horse-background:before {
+	content: "";
+	display: block;
+	padding-top: 1000px;
+}
+
+.services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  padding: 0 15px;
+	text-align: center;
+}
+
+.services__description {
+	margin-bottom: 10px;
+}
+
+.services__title {
+	margin-bottom: 50px;
+}
+
+.services__wrapper {
+	max-width: 1470px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.services__item {
+	max-width: 345px;
+	text-align: center;
+	padding: 40px;
+}
+
+.services__image {
+	margin-bottom: 20px;
+}
+
+.services__standart-title {
+	margin-bottom: 20px;
+}
+
+.standart-title {
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.presentation {
+	background: #f7f8fb;
+}
+
+.presentation__wrapper {
+	width: 100%;
+	display: flex;
+}
+
+.presentation__title {
+	margin-bottom: 20px;
+}
+
+.presentation__image-wrapper {
+	width: 50%;
+}
+
+.presentation_image {
+	max-width: 100%;
+	vertical-align:bottom;
+}
+
+.presentation__descriprion-wrapper {
+	margin-right: 15px;
+	width: calc(50% - 15px);
+	display: flex;
+}
+
+.presentation__descriprion {
+	max-width: 750px;
+  margin: auto 15%;
+}
+
+.presentation-second {
+	background: url(img/background-snow.png) 35px -80px / 35% no-repeat, url(img/background-snow.png) bottom -80px right 35px / 35% no-repeat;
+	padding-bottom: 100px;
+	padding-top: 120px;
+}
+
+.presentation-second__title {
+	margin-bottom: 20px;
+	color: #43a9ff;
+}
+
+.presentation-second__wrapper:nth-child(2), .presentation__wrapper:nth-child(2) {
+	flex-direction: row-reverse;
+}
+
+.presentation-second__wrapper {
+	width: 100%;
+	display: flex;
+}
+
+.presentation-second__image-wrapper {
+	width: 50%;
+}
+
+.presentation-second__description-wrapper {
+	display: flex;
+	width: 50%;
+}
+
+.presentation-second__description {
+	max-width: 550px;
+	margin: auto auto auto 0;
+	padding-left: 5%;
+}
+
+.presentation-second__wrapper:nth-child(2) .presentation-second__description {
+  margin: auto 0 auto auto;
+	padding-right: 5%
 }
 
 
+.presentation-second__image {
+  max-width: 100%;
+	float: right;
+  padding: 0 15% 0 15%;
+}
 
+.presentation-second__wrapper:nth-child(2) .presentation-second__image {
+	float: left;
+	padding-right: 0;
+	padding-left: 15%;
+}
 
+.quote {
+	width: 100%;
+	display: flex;
+	background-color: #f7f8fb;
+	padding-top: 40px;
+	margin-bottom: 100px;
+}
 
+.quote__title {
+	margin-bottom: 20px;
+	color: #fe3254;
+}
 
+.quote__left-wrapper {
+	width: 50%;
+	padding: 0 5% 0 5%;
+	background: url(img/background-snow-white.png) center 0 / 80% no-repeat;
+	text-align: center;
+}
 
+.quote__right-wrapper {
+	width: 50%;
+	display: flex;
+}
 
+.quote__right-inner-container {
+	max-width: 550px;
+  margin: auto 5% auto 0;
+  padding-left: 5%;
+}
 
+.quote__photo {
+	max-width: 100%;
+	vertical-align: bottom;
+}
 
-@media(min-width: 641px) {
+.quote__signature {
+	margin-top: 70px;
+}
+
+.quote__name {
+	font-weight: 600;
+	color: black;
+}
+
+.footer-wrapper {
+	text-align: center;
+	padding: 0 15%;
+}
+
+.footer-wrapper .title-text {
+	margin-bottom: 40px;
+}
+
+.last-background {
+	background: url('img/Photo_last.png') no-repeat center;
+	min-width: 100%;
+	height: 1100px;
+  margin-top: -200px;
+}
+
+@media (max-width: 1024px) {
 	
-	h2 {
-		font-size: 80px;
-		margin-top: 64px;
-	}
-
-	.number {
-		font-size: 18px;
-    /*border-bottom: 5px solid #5e42b0;*/
-	}
-
-	.number::after {
-		height: 5px;
+	html {
+		font-size: 10.25px;
 	}
 	
-	
-	.top {
-		background-image: url("img/football_1280.jpg");
+	.presentation__wrapper {
+		max-height: 400px;
 	}
 	
-	.top__logo {
-		width: 205px;
-		margin-top: 39px;
-	}
-	.top__logo-wrapper {
-		margin-bottom: 16.8vh;
+	.presentation_image {
+		width: auto;
+		height: 100%;
+    object-fit: cover;
 	}
 	
-	.top__text-wrapper {
-		margin: 0 10%;
-    line-height: 116%;
-		min-width: 85vw;
-	}
-	.top__first-text {
-		margin-bottom: 0;
+	.presentation__image-wrapper {
+		overflow: hidden;
 	}
 	
-	.top__second-text {
-		margin-bottom: 31vh;
-	}
-	
-	.top__store-wrapper {
-		display: flex;
+	.services__wrapper {
+		flex-wrap: wrap;
 		justify-content: center;
-    letter-spacing: 1px;
 	}
-	
-	.top__store-container {
-		margin-right: 20px;
-	}
-	
-	.top__store {
-		height: 77px;
-		flex-basis: 312px;
-		max-width: 312px;
-		border-radius: 40px;
-		margin: 0;
-	}
-	
-	.top__store:first-child {
-		margin-right: 30px;
-	}
-	
-	.top__store-wrapper {
-		font-size: 14px;
-		line-height: 18px;
-		margin: 0 20px;
-	}
-	
-	.top__apple-store {
-		margin: 0;
-	}
-	
-	.top__logo-apple {
-		height: 44px;
-		margin-right: 24px;
-	}
-	
-	.top__logo-google-play {
-		height: 46px;
-		margin-right: 26px;
-	}
-	
-	
-	.list__step-wrapper {
-		margin-top: 0;
-	}
-	
-	.list__step:first-child {
-		background-color: transparent;
-	}
-	
-	.athlets-center-container {
-		margin: 0;
-		margin-left: 35.5vw;
-		max-width: 65.10vw;
-	}
-	
-	.players-center-container {
-		margin: 0;
-		max-width: 65.10vw;
-	}
-	
-	.list__relative-position {
-		position: relative;
-	}
-	
-	.athlets__img-wrapper {
-		left: -435px;
-		top: 36px;
-	}
-	
-	.players__img-wrapper {
-		right: -470px;
-		top: -17px;
-	}
-	
-	.list__step-title {
-		font-size: 32px;
-	}
-	
-	.list__step-description {
-		font-size: 16px;
-		line-height: 27px;
-	}
-	
-	.list__step {
-		padding: 32px 20px;
-	}
-	
-	.list__step:first-child {
-		padding-top: 22px;
-	}
-	
-
 }
 
-
-
-
-
-@media(min-width: 961px) {
-
-	.top {
-		background-image: url("img/football_1920.jpg");
+@media (max-width: 720px) {
+	
+	.header__logo-container {
+		width: 200px;
+		height: 200px;
+		margin-top: -100px; 
 	}
 	
-	.top__logo {
-		width: 192px;
-	}
-
-	.top__logo-wrapper {
-		margin-bottom: 28.6vh;
-	}
-	
-	.top__text-wrapper {
-		font-size: 4.68vw;
-		display: flex;
-		flex-direction: column;
-		margin: 0 10.10vw;
-    min-width: 0;
-    letter-spacing: 4px;
-		line-height: 105%;
-	}
-
-	.top__second-text {
-		margin-left: auto;
-		margin-bottom: 21vh;
-	}
-	
-	.top__store:first-child {
-		margin-right: 50px;
-	}
-	
-	.athlets__img-wrapper {
-    left: -584px;
-    top: 12px;
-	}
-	
-	.players__img-wrapper {
-    right: -1200px;
-    top: -72px;
-	}	
-	
-	.athlets-center-container {
-		max-width: 716px;
-	}
-	
-	.players-center-container {
-		max-width: 716px;
-	}
-	
-	.list__step-title {
+	.header__logo {
+		margin-top: 115px;
 		font-size: 36px;
 	}
 	
-	.list__step-description {
-		font-size: 20px;
+	.header__logo-description {
+		font-size: 12px;
 	}
 	
-	.number {
-		margin-top: 7px;
+	.header__button {
+		margin-top: 20px;
 	}
 	
-	.athlets-center-container {
-		margin-left: 51.5vw;
+	.services {
+		margin-top: -190px;
+	}
+		
+	.quote, .presentation__wrapper, .presentation-second__wrapper, .presentation-second__wrapper:nth-child(2), .presentation__wrapper:nth-child(2) {
+		flex-direction: column;
+		text-align: center;
 	}
 	
-	.players-center-container {
-		/*margin-left: 51.5vw;*/
-		margin-left: auto;
-		margin-right: 51.5vw;
+	.horse-background {
+		background-position: -950px 0;
+	}
+	.presentation-second__wrapper {
+		align-items: center;
+		width: 100%;
+		text-align: center;
 	}
 	
-	h2 {
-		margin-top: 88px;
-		margin-bottom: 50px;
+	.presentation-second__wrapper:nth-child(2) .presentation-second__image, .presentation-second__image {
+		padding: 0;
+		float: none;
 	}
 	
-	h3 {
-		margin-bottom: 15px;
+	.presentation-second__image-wrapper, .presentation-second__description-wrapper, .quote__right-wrapper, .quote__left-wrapper  {
+		width: 100%;
 	}
 	
-	.list__step {
-		padding: 52px 20px;
+	.quote__left-wrapper, .quote__signature {
+		margin-bottom: 60px;
 	}
 	
-	.athlets-img-wrapper {
-		left: -596px;
-		top: -61px;
+	
+	.presentation__image-wrapper, .presentation__descriprion-wrapper {
+		width: 100%
 	}
 	
-	.players-img-wrapper {
-		left: -596px;
-		top: -61px;
+	.presentation__descriprion-wrapper {
+		margin-bottom: 60px;
+	}
+	
+	.presentation__image-wrapper {
+		height: 400px;
+		margin-bottom: 30px;
+	}
+	
+	.presentation__wrapper {
+		max-height: 100%;
+	}
+	
+	.header__button {
+		width: 42px;
+		height: 42px;
 	}
 }
